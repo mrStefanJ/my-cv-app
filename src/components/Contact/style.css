@@ -26,7 +26,7 @@
   margin: 10px;
 }
 
-.input-field {
+.contact__input {
   width: 80%;
   font-size: 0.875rem;
   font-weight: 400;
@@ -38,15 +38,15 @@
   box-shadow: var(--box-shadow);
 }
 
-.input-field:focus {
+.contact__input:focus {
   border-color: var(--text-primary);
 }
 
-.input-field:focus-visible {
+.contact__input:focus-visible {
   outline: 0;
 }
 
-.textarea-field {
+.contact__textarea {
   width: 80%;
   height: 200px;
   font-size: 0.875rem;
@@ -67,7 +67,7 @@
   outline: 0;
 }
 
-.contact__input-text--error{
+.contact__text-error{
   margin-bottom: 0;
   color: #ff0000;
 }

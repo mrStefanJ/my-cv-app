@@ -7,6 +7,7 @@ import {
 } from "react";
 import "./style.css";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = forwardRef((props, ref) => {
   const emailRef = useRef<HTMLInputElement>(null);
@@ -14,6 +15,14 @@ const Contact = forwardRef((props, ref) => {
   const companyRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const contactSectionRef = useRef<HTMLElement>(null);
+
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -21,31 +30,33 @@ const Contact = forwardRef((props, ref) => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => emailjs.init("LLQElBiNihID3Jufm"), []);
 
   const validateForm = () => {
     const newErrors = { name: "", email: "", company: "", message: "" };
     let isValid = true;
 
-    if (!nameRef.current?.value) {
+    if (!values.name) {
       newErrors.name = "Name is required";
       isValid = false;
     }
 
-    if (!emailRef.current?.value) {
+    if (!values.email) {
       newErrors.email = "Email is required";
       isValid = false;
-    } else if (!/\S+@\S+\.\S+/.test(emailRef.current?.value)) {
+    } else if (!/\S+@\S+\.\S+/.test(values.email)) {
       newErrors.email = "Email address is invalid";
       isValid = false;
     }
 
-    if (!companyRef.current?.value) {
+    if (!values.company) {
       newErrors.company = "Company is required";
       isValid = false;
     }
 
-    if (!messageRef.current?.value) {
+    if (!values.message) {
       newErrors.message = "Message is required";
       isValid = false;
     }
@@ -55,10 +66,7 @@ const Contact = forwardRef((props, ref) => {
   };
 
   const resetForm = () => {
-    if (nameRef.current) nameRef.current.value = "";
-    if (emailRef.current) emailRef.current.value = "";
-    if (companyRef.current) companyRef.current.value = "";
-    if (messageRef.current) messageRef.current.value = "";
+    setValues({ name: "", email: "", company: "", message: "" });
     setErrors({ name: "", email: "", company: "", message: "" });
   };
 
@@ -68,20 +76,36 @@ const Contact = forwardRef((props, ref) => {
       return;
     }
 
+    setLoading(true);
+
     const serviceId = "service_94zvvt8";
     const templateId = "template_z5cp5vp";
     try {
       await emailjs.send(serviceId, templateId, {
-        name: nameRef.current?.value,
-        company: companyRef.current?.value,
-        email: emailRef.current?.value,
-        message: messageRef.current?.value,
+        name: values.name,
+        company: values.company,
+        email: values.email,
+        message: values.message,
       });
-      alert("Email successfully sent, check your inbox");
+      toast.success("Email successfully sent :)");
       resetForm();
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
+  };
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
   };
 
   useImperativeHandle(ref, () => ({
@@ -101,12 +125,15 @@ const Contact = forwardRef((props, ref) => {
           <input
             ref={nameRef}
             id="name"
-            className="input-field"
+            name="name"
+            value={values.name}
+            onChange={handleChange}
+            className={`contact__input ${
+              errors.name ? "contact__input--error" : ""
+            }`}
             placeholder="Enter your name"
           />
-          {errors.name && (
-            <p className="contact__input-text--error">{errors.name}</p>
-          )}
+          {errors.name && <p className="contact__text-error">{errors.name}</p>}
         </div>
         <div className="contact__form-group">
           <label className="contact__label" htmlFor="email">
@@ -116,11 +143,16 @@ const Contact = forwardRef((props, ref) => {
             ref={emailRef}
             type="email"
             id="email"
-            className="input-field"
+            name="email"
+            value={values.email}
+            onChange={handleChange}
+            className={`contact__input ${
+              errors.email ? "contact__input--error" : ""
+            }`}
             placeholder="Enter your email"
           />
           {errors.email && (
-            <p className="contact__input-text--error">{errors.email}</p>
+            <p className="contact__text-error">{errors.email}</p>
           )}
         </div>
         <div className="contact__form-group">
@@ -131,11 +163,16 @@ const Contact = forwardRef((props, ref) => {
             ref={companyRef}
             type="text"
             id="company"
-            className="input-field"
+            name="company"
+            value={values.company}
+            onChange={handleChange}
+            className={`contact__input ${
+              errors.company ? "contact__input--error" : ""
+            }`}
             placeholder="Enter your company"
           />
           {errors.company && (
-            <p className="contact__input-text--error">{errors.company}</p>
+            <p className="contact__text-error">{errors.company}</p>
           )}
         </div>
         <div className="contact__form-group">
@@ -145,16 +182,22 @@ const Contact = forwardRef((props, ref) => {
           <textarea
             ref={messageRef}
             id="message"
-            className="textarea-field"
+            name="message"
+            value={values.message}
+            onChange={handleChange}
+            className={`contact__textarea ${
+              errors.message ? "contact__textarea--error" : ""
+            }`}
             placeholder="Enter your message"
           />
           {errors.message && (
-            <p className="contact__input-text--error">{errors.message}</p>
+            <p className="contact__text-error">{errors.message}</p>
           )}
         </div>
-        <button className="contact__button" type="submit">
-          Subscribe
+        <button className="contact__button" type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Subscribe"}
         </button>
+        <Toaster />
       </form>
     </section>
   );
