@@ -3,6 +3,7 @@ import "./style.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Sun from "../../assets/icons/sun.png";
 import Moon from "../../assets/icons/moon.png";
+import { Link } from "@mui/material";
 
 const Header = ({
   theme,
@@ -51,34 +52,42 @@ const Header = ({
           isMenuOpen ? "header__navigation--open" : ""
         }`}
       >
-        <a
+        <Link
           href="#about-me"
+          target="_blank"
+          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToAboutMe}
         >
           About Me
-        </a>
-        <a
+        </Link>
+        <Link
           href="#skills"
+          target="_blank"
+          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToSkills}
         >
           Skills
-        </a>
-        <a
+        </Link>
+        <Link
           href="#my-works"
+          target="_blank"
+          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToProjects}
         >
           Projects
-        </a>
-        <a
+        </Link>
+        <Link
           href="#contact"
+          target="_blank"
+          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToContact}
         >
           Contact Me
-        </a>
+        </Link>
       </nav>
       <button className="header__button" onClick={onClick}>
         {theme === "light" ? (
