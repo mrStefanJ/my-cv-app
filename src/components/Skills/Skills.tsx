@@ -9,6 +9,7 @@ import Json from "../../assets/icons/json.svg";
 import TypeScript from "../../assets/icons/typescript.svg";
 import Sass from "../../assets/icons/sass.svg";
 import VisualStudio from "../../assets/icons/visual-studio-code.svg";
+import Firebase from "../../assets/icons/firebase.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
@@ -74,6 +75,10 @@ const Skills = forwardRef((prop, ref) => {
           {" "}
           <img src={Git} alt="Git" className="icon" />
           <span className="tooltip-text">Git</span>
+        </div>
+        <div className="icon--tooltip">
+          <img src={Firebase} alt="Firebase" className="icon" />
+          <span className="tooltip-text">Firebase</span>
         </div>
       </div>
     </section>
