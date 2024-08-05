@@ -51,16 +51,32 @@ const Header = ({
           isMenuOpen ? "header__navigation--open" : ""
         }`}
       >
-        <a className="header__navigation-link" onClick={handleScrollToAboutMe}>
+        <a
+          href="#about-me"
+          className="header__navigation-link"
+          onClick={handleScrollToAboutMe}
+        >
           About Me
         </a>
-        <a className="header__navigation-link" onClick={handleScrollToSkills}>
+        <a
+          href="#skills"
+          className="header__navigation-link"
+          onClick={handleScrollToSkills}
+        >
           Skills
         </a>
-        <a className="header__navigation-link" onClick={handleScrollToProjects}>
+        <a
+          href="#my-works"
+          className="header__navigation-link"
+          onClick={handleScrollToProjects}
+        >
           Projects
         </a>
-        <a className="header__navigation-link" onClick={handleScrollToContact}>
+        <a
+          href="#contact"
+          className="header__navigation-link"
+          onClick={handleScrollToContact}
+        >
           Contact Me
         </a>
       </nav>

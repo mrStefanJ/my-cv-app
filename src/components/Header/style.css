@@ -39,9 +39,9 @@
 }
 
 .header__navigation-link {
-  margin: 5px 0;
-  text-decoration: none;
+  margin: 11px 0;
   color: var(--text-primary);
+  cursor: pointer;
 }
 
 .header__button {
