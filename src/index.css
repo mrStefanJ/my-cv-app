@@ -1,13 +1,48 @@
+* ::after,::before{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+h2 {
+  margin: 5px 20px;
+  color: var(--text-primary);
+}
+
+:root {
+  --background-primary: #ffffff;
+  --background-secondery: #000000;
+  --text-primary: #000000;
+  --text-secondery: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 1.0625em,
+  rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+  rgba(255, 255, 255, 0.1) 0px 0px 0px 0px inset;
+  --link-primary: #000000;
+  --link-primaty__hover: #ffffff;
+  --btn-primary: #000000;
+}
+[data-theme='dark'] {
+  --background-primary: #000000;
+  --background-secondery: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondery: #000000;
+  --box-shadow: rgba(255, 255, 255, 0.84) 0px 0.0625em 1.0625em,
+  rgba(244, 241, 241, 0.849) 0px 0.125em 0.5em,
+  rgba(236, 233, 233, 0.821) 0px 0px 0px 0px inset;
+  --link-primary: #ffffff;
+  --link-primaty__hover: #000000;
+  --btn-primary: #ffffff;
 }

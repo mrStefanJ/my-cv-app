@@ -1,0 +1,46 @@
+.skills {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin: 30px 0;
+  padding: 0 40px;
+}
+
+.icons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon--tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.icon--tooltip .tooltip-text {
+  position: absolute;
+  top: -40px;
+  left: -35px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: var(--background-secondery);
+  color: var(--text-secondery);
+  padding: 5px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.icon--tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
