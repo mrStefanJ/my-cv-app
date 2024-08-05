@@ -3,6 +3,7 @@ import MovieSeries from "../../assets/movie_serie_app.png";
 import Quiz from "../../assets/Javascript_test.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import { Link } from "@mui/material";
 
 const Projects = forwardRef((props, ref) => {
   const projectsSectionRef = useRef<HTMLElement>(null);
@@ -24,20 +25,22 @@ const Projects = forwardRef((props, ref) => {
             <p className="text">This is simple project about Quiz app.</p>
           </div>
           <div className="project-links">
-            <a
+            <Link
               href="https://github.com/mrStefanJ/quiz-app"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Github Link
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://javascript-quiz-v1.netlify.app"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Live
-            </a>
+            </Link>
           </div>
         </div>
         <div className="project__group">
@@ -55,20 +58,22 @@ const Projects = forwardRef((props, ref) => {
             </p>
           </div>
           <div className="project-links">
-            <a
+            <Link
               href="https://github.com/mrStefanJ/movie-app"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Github Link
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://movies-series-v1.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Live
-            </a>
+            </Link>
           </div>
         </div>
         <div className="project__group">
@@ -83,22 +88,27 @@ const Projects = forwardRef((props, ref) => {
               This project is Table Tennis which user can adding new Player,
               display all Players and showing result of the games.
             </p>
+            <p className="text-info">
+              Info: This project in Live is not working well with JSON server!!!
+            </p>
           </div>
           <div className="project-links">
-            <a
+            <Link
               href="https://github.com/mrStefanJ/table-tennis"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Github Link
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://table-tenis-v1.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
               className="btn link"
             >
               Live
-            </a>
+            </Link>
           </div>
         </div>
       </div>
