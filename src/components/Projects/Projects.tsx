@@ -16,20 +16,22 @@ const Projects = forwardRef((props, ref) => {
 
   return (
     <section className="projects" ref={projectsSectionRef}>
-      <h2 className="title">My Works</h2>
-      <div className="projects-list">
-        <div className="project__group">
+      <h2 className="projects__title">My Works</h2>
+      <div className="projects__list">
+        <div className="project">
           <img src={Quiz} alt="Quiz App" className="project__image" />
           <h2 className="project__title">Javascript Test</h2>
-          <div className="about-project">
-            <p className="text">This is simple project about Quiz app.</p>
+          <div className="project__about">
+            <p className="project__text">
+              This is simple project about Quiz app.
+            </p>
           </div>
-          <div className="project-links">
+          <div className="project__links">
             <Link
               href="https://github.com/mrStefanJ/quiz-app"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Github Link
             </Link>
@@ -37,32 +39,32 @@ const Projects = forwardRef((props, ref) => {
               href="https://javascript-quiz-v1.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Live
             </Link>
           </div>
         </div>
-        <div className="project__group">
+        <div className="project">
           <img
             src={MovieSeries}
             alt="Movie Series App"
             className="project__image"
           />
           <h2 className="project__title">Movie App</h2>
-          <div className="about-project">
-            <p className="text">
+          <div className="project__about">
+            <p className="project__text">
               This is app for Movies and Series, where user can see on Tending
               page all Movies and Series. On Movies or Series page will have
               options to select genres and display it.
             </p>
           </div>
-          <div className="project-links">
+          <div className="project__links">
             <Link
               href="https://github.com/mrStefanJ/movie-app"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Github Link
             </Link>
@@ -70,34 +72,34 @@ const Projects = forwardRef((props, ref) => {
               href="https://movies-series-v1.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Live
             </Link>
           </div>
         </div>
-        <div className="project__group">
+        <div className="project">
           <img
             src={TableTennis}
             alt="table tennis"
             className="project__image"
           />
           <h2 className="project__title">Table Tenis</h2>
-          <div className="about-project">
-            <p className="text">
+          <div className="project__about">
+            <p className="project__text">
               This project is Table Tennis which user can adding new Player,
               display all Players and showing result of the games.
             </p>
-            <p className="text-info">
+            <p className="project__text-info">
               Info: This project in Live is not working well with JSON server!!!
             </p>
           </div>
-          <div className="project-links">
+          <div className="project__links">
             <Link
               href="https://github.com/mrStefanJ/table-tennis"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Github Link
             </Link>
@@ -105,7 +107,7 @@ const Projects = forwardRef((props, ref) => {
               href="https://table-tenis-v1.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn link"
+              className="project__link"
             >
               Live
             </Link>

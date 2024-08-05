@@ -73,6 +73,7 @@
 }
 
 .contact__button {
+  cursor: pointer;
   padding: 10px;
   border: 0px solid;
   box-shadow: inset 0 0 20px var(--box-shadow);
