@@ -24,7 +24,7 @@ h2 {
 
 :root {
   --background-primary: #ffffff;
-  --background-secondery: #000000;
+  --background-secondary: #000000;
   --text-primary: #000000;
   --text-secondery: #ffffff;
   --box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 1.0625em,
@@ -36,7 +36,7 @@ h2 {
 }
 [data-theme='dark'] {
   --background-primary: #000000;
-  --background-secondery: #ffffff;
+  --background-secondary: #ffffff;
   --text-primary: #ffffff;
   --text-secondery: #000000;
   --box-shadow: rgba(255, 255, 255, 0.84) 0px 0.0625em 1.0625em,

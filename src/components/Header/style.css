@@ -1,14 +1,14 @@
 .header {
   position: sticky;
   top: 0;
-  padding: 10px 0;
+  padding: 10px 5px;
   z-index: 1;
   box-shadow: var(--box-shadow);
   background-color: var(--background-primary);
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .header__toggle {
@@ -34,13 +34,13 @@
 
 .header__navigation--open {
   max-height: 300px;
-  border-bottom: 1px solid var(--background-secondery);
-  border-top: 1px solid var(--background-secondery);
+  border-bottom: 1px solid var(--background-secondary);
+  border-top: 1px solid var(--background-secondary);
 }
 
 .header__navigation-link {
   position: relative;
-  margin: 11px 0;
+  margin: 8px 0!important;
   text-decoration: none;
   color: inherit;
 }
@@ -76,6 +76,7 @@
   height: 20px;
   margin-top: 4px;
 }
+
 
 @media (min-width: 768px) {
   .header__toggle {
