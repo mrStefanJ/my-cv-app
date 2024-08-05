@@ -33,8 +33,8 @@
   visibility: hidden;
   opacity: 0;
   width: 120px;
-  background-color: var(--background-secondery);
-  color: var(--text-secondery);
+  background-color: var(--background-secondary);
+  color: var(--text-secondeay);
   padding: 5px;
   border-radius: 4px;
   transition: opacity 0.3s ease, visibility 0.3s ease;
