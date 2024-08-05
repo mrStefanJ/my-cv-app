@@ -26,12 +26,14 @@ const Projects = forwardRef((props, ref) => {
           <div className="project-links">
             <a
               href="https://github.com/mrStefanJ/quiz-app"
+              target="_blank"
               className="btn link"
             >
               Github Link
             </a>
             <a
-              href="https://deft-macaron-a31ae9.netlify.app/"
+              href="https://javascript-quiz-v1.netlify.app"
+              target="_blank"
               className="btn link"
             >
               Live
@@ -55,12 +57,14 @@ const Projects = forwardRef((props, ref) => {
           <div className="project-links">
             <a
               href="https://github.com/mrStefanJ/movie-app"
+              target="_blank"
               className="btn link"
             >
               Github Link
             </a>
             <a
               href="https://movies-series-v1.netlify.app/"
+              target="_blank"
               className="btn link"
             >
               Live
@@ -83,11 +87,16 @@ const Projects = forwardRef((props, ref) => {
           <div className="project-links">
             <a
               href="https://github.com/mrStefanJ/table-tennis"
+              target="_blank"
               className="btn link"
             >
               Github Link
             </a>
-            <a href="https://table-tenis-v1.netlify.app/" className="btn link">
+            <a
+              href="https://table-tenis-v1.netlify.app/"
+              target="_blank"
+              className="btn link"
+            >
               Live
             </a>
           </div>
