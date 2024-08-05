@@ -54,8 +54,6 @@ const Header = ({
       >
         <Link
           href="#about-me"
-          target="_blank"
-          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToAboutMe}
         >
@@ -63,8 +61,6 @@ const Header = ({
         </Link>
         <Link
           href="#skills"
-          target="_blank"
-          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToSkills}
         >
@@ -72,8 +68,6 @@ const Header = ({
         </Link>
         <Link
           href="#my-works"
-          target="_blank"
-          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToProjects}
         >
@@ -81,8 +75,6 @@ const Header = ({
         </Link>
         <Link
           href="#contact"
-          target="_blank"
-          rel="noopener noreferrer"
           className="header__navigation-link"
           onClick={handleScrollToContact}
         >
