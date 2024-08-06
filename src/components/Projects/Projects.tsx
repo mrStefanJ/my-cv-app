@@ -90,9 +90,6 @@ const Projects = forwardRef((props, ref) => {
               This project is Table Tennis which user can adding new Player,
               display all Players and showing result of the games.
             </p>
-            <p className="project__text-info">
-              Info: This project in Live is not working well with JSON server!!!
-            </p>
           </div>
           <div className="project__links">
             <Link
@@ -104,7 +101,7 @@ const Projects = forwardRef((props, ref) => {
               Github Link
             </Link>
             <Link
-              href="https://table-tenis-v1.netlify.app/"
+              href="https://table-tenis-v1.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="project__link"
