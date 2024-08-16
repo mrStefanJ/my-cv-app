@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import "./style.css";
 import { Link } from "@mui/material";
 import { VscMortarBoard } from "react-icons/vsc";
+import MaskiskiLogo from "../../assets/icons/masinski-logo.png";
 
 const Education = forwardRef((props, ref) => {
   const educationSectionRef = useRef<HTMLElement>(null);
@@ -20,7 +21,20 @@ const Education = forwardRef((props, ref) => {
       <div className="education__level">
         <div className="education__faculty">
           <div className="faculty">
-            <p className="faculty-name">{t("facultyName")}</p>
+            <div className="faculty__logo">
+              <Link
+                href={t("facultyLink")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={MaskiskiLogo}
+                  alt="Masinski Fakultet, Univerzititet Beograd"
+                  className="logo"
+                />
+              </Link>
+              <p className="faculty-name">{t("facultyName")}</p>
+            </div>
             <p className="date">2015-2017</p>
             <div className="degree">
               <VscMortarBoard />
@@ -28,7 +42,20 @@ const Education = forwardRef((props, ref) => {
             </div>
           </div>
           <div className="faculty">
-            <p className="faculty-name">{t("facultyName")}</p>
+            <div className="faculty__logo">
+              <Link
+                href={t("facultyLink")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={MaskiskiLogo}
+                  alt="Masinski Fakultet, Univerzititet Beograd"
+                  className="logo"
+                />
+              </Link>
+              <p className="faculty-name">{t("facultyName")}</p>
+            </div>
             <p className="date">2011-2015</p>
             <div className="degree">
               <VscMortarBoard />

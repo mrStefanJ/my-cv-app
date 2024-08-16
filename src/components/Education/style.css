@@ -36,6 +36,29 @@
   padding: 10px;
 }
 
+.faculty__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.faculty__logo .logo {
+  width: 200px;
+  height: auto;
+  padding: 0 10px;
+  perspective: 100px;
+}
+
+.logo {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.logo:hover {
+  transform: rotateY(180deg);
+}
+
 .date {
   text-align: center;
 }
