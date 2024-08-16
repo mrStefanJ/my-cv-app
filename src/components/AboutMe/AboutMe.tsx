@@ -1,13 +1,15 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import DefaultProfile from "../../assets/default-avatar.png";
 import "./style.css";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const AboutMe = forwardRef((props, ref) => {
   const aboutmeSectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useImperativeHandle(ref, () => ({
-    scrollToProjects: () => {
+    scrollToAboutMe: () => {
       aboutmeSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     },
   }));
@@ -19,17 +21,10 @@ const AboutMe = forwardRef((props, ref) => {
       </div>
       <div className="profile__text">
         <p className="about-me__text">
-          Hello, my name is{" "}
-          <span className="text--animation">Stefan Jončić</span>.
+          {t("hello")} <span className="text--animation">Stefan Jončić</span>.
         </p>
-        <p className="about-me__text">I am Frontend Developer.</p>
-        <p className="about-me__text">
-          I have theoretical and practical knowledge in Information system
-          technologies. Analytic ability to come the core of problem, strong
-          organizational skills that help me meet deadlines readiness work both
-          as a team member individually. I have theoretical and practical
-          knowledge in Information system technologies.
-        </p>
+        <p className="about-me__text">{t("iam")} Frontend Developer.</p>
+        <p className="about-me__text">{t("aboutMe")}</p>
         <div className="profile__icons">
           <a
             href="https://www.linkedin.com/in/stefan-jon%C4%8Di%C4%87-64958a86/"

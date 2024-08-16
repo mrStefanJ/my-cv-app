@@ -12,9 +12,11 @@ import VisualStudio from "../../assets/icons/visual-studio-code.svg";
 import Firebase from "../../assets/icons/firebase.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const Skills = forwardRef((prop, ref) => {
   const skillsSectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useImperativeHandle(ref, () => ({
     scrollToProjects: () => {
@@ -24,7 +26,7 @@ const Skills = forwardRef((prop, ref) => {
 
   return (
     <section className="skills" ref={skillsSectionRef}>
-      <h2>Skills</h2>
+      <h2>{t("skills")}</h2>
       <div className="icons">
         <div className="icon--tooltip">
           <img src={React} alt="React" className="icon" />

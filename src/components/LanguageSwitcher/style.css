@@ -1,0 +1,24 @@
+.language {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .language-select {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    cursor: pointer; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .language-select:hover {
+    box-shadow: var(--box-shadow); 
+  }
+  
+  .language-select:focus {
+    border-color: #666; 
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+  }

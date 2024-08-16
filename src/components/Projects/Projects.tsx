@@ -4,9 +4,11 @@ import Quiz from "../../assets/Javascript_test.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { Link } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Projects = forwardRef((props, ref) => {
   const projectsSectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useImperativeHandle(ref, () => ({
     scrollToProjects: () => {
@@ -16,15 +18,13 @@ const Projects = forwardRef((props, ref) => {
 
   return (
     <section className="projects" ref={projectsSectionRef}>
-      <h2 className="projects__title">My Works</h2>
+      <h2 className="projects__title">{t("myWorks")}</h2>
       <div className="projects__list">
         <div className="project">
           <img src={Quiz} alt="Quiz App" className="project__image" />
           <h2 className="project__title">Javascript Test</h2>
           <div className="project__about">
-            <p className="project__text">
-              This is simple project about Quiz app.
-            </p>
+            <p className="project__text">{t("projectOne")}</p>
           </div>
           <div className="project__links">
             <Link
@@ -53,11 +53,7 @@ const Projects = forwardRef((props, ref) => {
           />
           <h2 className="project__title">Movie App</h2>
           <div className="project__about">
-            <p className="project__text">
-              This is app for Movies and Series, where user can see on Tending
-              page all Movies and Series. On Movies or Series page will have
-              options to select genres and display it.
-            </p>
+            <p className="project__text">{t("projectTwo")}</p>
           </div>
           <div className="project__links">
             <Link
@@ -86,10 +82,7 @@ const Projects = forwardRef((props, ref) => {
           />
           <h2 className="project__title">Table Tenis</h2>
           <div className="project__about">
-            <p className="project__text">
-              This project is Table Tennis which user can adding new Player,
-              display all Players and showing result of the games.
-            </p>
+            <p className="project__text">{t("projectThree")}</p>
           </div>
           <div className="project__links">
             <Link

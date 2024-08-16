@@ -8,6 +8,7 @@ import {
 import "./style.css";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = forwardRef((props, ref) => {
   const emailRef = useRef<HTMLInputElement>(null);
@@ -15,6 +16,7 @@ const Contact = forwardRef((props, ref) => {
   const companyRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const contactSectionRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   const [values, setValues] = useState({
     name: "",
@@ -116,11 +118,11 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <section className="contact" ref={contactSectionRef}>
-      <h2 className="contact__title">Contact Me</h2>
+      <h2 className="contact__title">{t("contact")}</h2>
       <form className="contact__form" onSubmit={handleSubmit}>
         <div className="contact__form-group">
           <label className="contact__label" htmlFor="name">
-            Name
+            {t("contactName")}
           </label>
           <input
             ref={nameRef}
@@ -131,13 +133,13 @@ const Contact = forwardRef((props, ref) => {
             className={`contact__input ${
               errors.name ? "contact__input--error" : ""
             }`}
-            placeholder="Enter your name"
+            placeholder={t("enterName")}
           />
           {errors.name && <p className="contact__text-error">{errors.name}</p>}
         </div>
         <div className="contact__form-group">
           <label className="contact__label" htmlFor="email">
-            Email
+            {t("contactEmail")}
           </label>
           <input
             ref={emailRef}
@@ -149,7 +151,7 @@ const Contact = forwardRef((props, ref) => {
             className={`contact__input ${
               errors.email ? "contact__input--error" : ""
             }`}
-            placeholder="Enter your email"
+            placeholder={t("enterEmail")}
           />
           {errors.email && (
             <p className="contact__text-error">{errors.email}</p>
@@ -157,7 +159,7 @@ const Contact = forwardRef((props, ref) => {
         </div>
         <div className="contact__form-group">
           <label className="contact__label" htmlFor="company">
-            Company
+            {t("contactCompnay")}
           </label>
           <input
             ref={companyRef}
@@ -169,7 +171,7 @@ const Contact = forwardRef((props, ref) => {
             className={`contact__input ${
               errors.company ? "contact__input--error" : ""
             }`}
-            placeholder="Enter your company"
+            placeholder={t("enterCompany")}
           />
           {errors.company && (
             <p className="contact__text-error">{errors.company}</p>
@@ -177,7 +179,7 @@ const Contact = forwardRef((props, ref) => {
         </div>
         <div className="contact__form-group">
           <label className="contact__label" htmlFor="message">
-            Message
+            {t("copntactMessage")}
           </label>
           <textarea
             ref={messageRef}
@@ -188,14 +190,14 @@ const Contact = forwardRef((props, ref) => {
             className={`contact__textarea ${
               errors.message ? "contact__textarea--error" : ""
             }`}
-            placeholder="Enter your message"
+            placeholder={t("enterMessage")}
           />
           {errors.message && (
             <p className="contact__text-error">{errors.message}</p>
           )}
         </div>
         <button className="contact__button" type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Subscribe"}
+          {loading ? t("buttonSending") : t("buttonSubscribe")}
         </button>
         <Toaster />
       </form>
