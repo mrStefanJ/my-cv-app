@@ -13,6 +13,7 @@ import Firebase from "../../assets/icons/firebase.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "@mui/material";
 
 const Skills = forwardRef((prop, ref) => {
   const skillsSectionRef = useRef<HTMLElement>(null);
@@ -29,57 +30,124 @@ const Skills = forwardRef((prop, ref) => {
       <h2>{t("skills")}</h2>
       <div className="icons">
         <div className="icon--tooltip">
-          <img src={React} alt="React" className="icon" />
+          <Link
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={React} alt="React" className="icon" />
+          </Link>
           <span className="tooltip-text">React</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={Redux} alt="Redux" className="icon" />
+          <Link
+            href="https://redux.js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Redux} alt="Redux" className="icon" />
+          </Link>
           <span className="tooltip-text">Redux</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={JavaScript} alt="JavaScript" className="icon" />
+          <Link
+            href="https://www.w3schools.com/js/default.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={JavaScript} alt="JavaScript" className="icon" />
+          </Link>
           <span className="tooltip-text">JavaScript</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={Angular} alt="Angular" className="icon" />
+          <Link
+            href="https://angular.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Angular} alt="Angular" className="icon" />
+          </Link>
           <span className="tooltip-text">Angular</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={Html} alt="Html" className="icon" />
+          <Link
+            href="https://www.w3schools.com/html/default.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Html} alt="Html" className="icon" />
+          </Link>
           <span className="tooltip-text">HTML5</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={Css} alt="Css" className="icon" />
+          <Link
+            href="https://www.w3schools.com/css/default.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Css} alt="Css" className="icon" />
+          </Link>
           <span className="tooltip-text">CSS3</span>
         </div>
         <div className="icon--tooltip">
-          <img src={Json} alt="Json" className="icon" />
+          <Link
+            href="https://www.json.org/json-en.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Json} alt="Json" className="icon" />
+          </Link>
           <span className="tooltip-text">JSON</span>
         </div>
         <div className="icon--tooltip">
-          <img src={TypeScript} alt="TypeScript" className="icon" />
+          <Link
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={TypeScript} alt="TypeScript" className="icon" />
+          </Link>
           <span className="tooltip-text">TypeScript</span>
         </div>
         <div className="icon--tooltip">
-          <img src={Sass} alt="Sass" className="icon" />
+          <Link
+            href="https://sass-lang.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Sass} alt="Sass" className="icon" />
+          </Link>
           <span className="tooltip-text">SASS</span>
         </div>
         <div className="icon--tooltip">
-          <img src={VisualStudio} alt="Visula Studio" className="icon" />
+          <Link
+            href="https://code.visualstudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={VisualStudio} alt="Visula Studio" className="icon" />
+          </Link>
+
           <span className="tooltip-text">Visual Studio Code</span>
         </div>
         <div className="icon--tooltip">
-          {" "}
-          <img src={Git} alt="Git" className="icon" />
+          <Link
+            href="https://git-scm.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Git} alt="Git" className="icon" />
+          </Link>
           <span className="tooltip-text">Git</span>
         </div>
         <div className="icon--tooltip">
-          <img src={Firebase} alt="Firebase" className="icon" />
+          <Link
+            href="https://firebase.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Firebase} alt="Firebase" className="icon" />
+          </Link>
           <span className="tooltip-text">Firebase</span>
         </div>
       </div>
