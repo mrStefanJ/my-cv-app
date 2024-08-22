@@ -88,4 +88,8 @@
   .profile__text {
     width: 50%;
   }
+
+  .profile__icons {
+    justify-content: flex-start;
+  }
 }

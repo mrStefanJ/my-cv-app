@@ -1,6 +1,6 @@
 import TableTennis from "../../assets/Table_tennis.png";
 import MovieSeries from "../../assets/movie_serie_app.png";
-import Quiz from "../../assets/Javascript_test.png";
+import Quiz from "../../assets/Quiz.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { Link } from "@mui/material";
@@ -22,7 +22,7 @@ const Projects = forwardRef((props, ref) => {
       <div className="projects__list">
         <div className="project">
           <img src={Quiz} alt="Quiz App" className="project__image" />
-          <h2 className="project__title">Javascript Test</h2>
+          <h2 className="project__title">Quiz</h2>
           <div className="project__about">
             <p className="project__text">{t("projectOne")}</p>
           </div>
@@ -36,7 +36,7 @@ const Projects = forwardRef((props, ref) => {
               Github Link
             </Link>
             <Link
-              href="https://javascript-quiz-v1.netlify.app"
+              href="https://quiz-for-programmer.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="project__link"

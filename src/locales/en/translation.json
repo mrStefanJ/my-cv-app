@@ -10,7 +10,7 @@
   "facultyName": "University of Belgrade, Faculty of Mechanical Engineering",
   "facultyLink": "https://www.en.mas.bg.ac.rs/",
   "myWorks": "My Works",
-  "projectOne": "This is simple project about Quiz. Where user can do a test of JavaScript and choose junior, medium or senior level.",
+  "projectOne": "This is simple project about Quiz. Where user can choose a test of HTML, CSS or JavaScript and choose junior, medium or senior level.",
   "projectTwo": "This is app for Movies and Series, where user can see on Trending page all Movies and Series. On Movies or Series page will have options to select genres.",
   "projectThree": "This project is Table Tennis which user can adding new Player, display all Players and showing result of the games.",
   "contactName": "Name",
