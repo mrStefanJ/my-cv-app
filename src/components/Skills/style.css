@@ -25,8 +25,9 @@
   display: inline-block;
 }
 
-.icon--tooltip:hover {
-  opacity: 0.5;
+.icon--tooltip .MuiLink-root {
+  display: block;
+  height: auto;
 }
 
 .icon--tooltip .tooltip-text {
@@ -44,7 +45,11 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.icon--tooltip:hover .MuiLink-root {
+  opacity: 0.5;
+}
 .icon--tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
+

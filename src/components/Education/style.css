@@ -12,6 +12,12 @@
   text-align: center;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .faculty {
   margin: 10px 0;
   width: 100%;
@@ -33,30 +39,41 @@
 }
 
 .faculty-name {
-  padding: 10px;
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .faculty__logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   padding-top: 10px;
 }
 
-.faculty__logo .logo {
+
+.faculty__logo .MuiLink-root{
+  display: inline-block;
+  height: auto;
+}
+
+.faculty__logo .icon {
   width: 200px;
   height: auto;
   padding: 0 10px;
   perspective: 100px;
 }
 
-.logo {
+.icon {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
-.logo:hover {
-  transform: rotateY(180deg);
+.icon .MuiLink-root{
+  display: block;
+  height: auto;
+}
+
+.icon:hover {
+  transform: rotateY(360deg);
 }
 
 .date {
@@ -70,6 +87,21 @@
   justify-content: center;
 }
 
-.degree p {
+.degree svg {
+  font-size: 20px;
+}
+
+.degree__name {
   padding-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  .flex{
+    flex-direction: row;
+  }
+  .faculty-name {
+    padding: 10px 10px 0 0;
+  }
 }

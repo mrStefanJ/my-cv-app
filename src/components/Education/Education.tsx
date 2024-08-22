@@ -20,7 +20,7 @@ const Education = forwardRef((props, ref) => {
       <h2 className="education__title">{t("education")}</h2>
       <div className="education__level">
         <div className="education__faculty">
-          <div className="faculty">
+          <div className="faculty flex">
             <div className="faculty__logo">
               <Link
                 href={t("facultyLink")}
@@ -29,19 +29,21 @@ const Education = forwardRef((props, ref) => {
               >
                 <img
                   src={MaskiskiLogo}
-                  alt="Masinski Fakultet, Univerzititet Beograd"
-                  className="logo"
+                  alt={t("facultyName")}
+                  className="icon"
                 />
               </Link>
-              <p className="faculty-name">{t("facultyName")}</p>
             </div>
-            <p className="date">2015-2017</p>
-            <div className="degree">
-              <VscMortarBoard />
-              <p>Master Degree</p>
+            <div className="faculty__describe">
+              <p className="faculty-name">{t("facultyName")}</p>
+              <p className="date">2015-2017</p>
+              <div className="degree">
+                <VscMortarBoard />
+                <p className="degree__name">Master Degree</p>
+              </div>
             </div>
           </div>
-          <div className="faculty">
+          <div className="faculty flex">
             <div className="faculty__logo">
               <Link
                 href={t("facultyLink")}
@@ -50,16 +52,18 @@ const Education = forwardRef((props, ref) => {
               >
                 <img
                   src={MaskiskiLogo}
-                  alt="Masinski Fakultet, Univerzititet Beograd"
-                  className="logo"
+                  alt={t("facultyName")}
+                  className="icon"
                 />
               </Link>
-              <p className="faculty-name">{t("facultyName")}</p>
             </div>
-            <p className="date">2011-2015</p>
-            <div className="degree">
-              <VscMortarBoard />
-              <p>Bachelor Degree</p>
+            <div className="faculty__describe">
+              <p className="faculty-name">{t("facultyName")}</p>
+              <p className="date">2011-2015</p>
+              <div className="degree">
+                <VscMortarBoard />
+                <p className="degree__name">Bachelor Degree</p>
+              </div>
             </div>
           </div>
         </div>
