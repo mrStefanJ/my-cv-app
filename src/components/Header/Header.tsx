@@ -29,22 +29,27 @@ const Header = ({
 
   const handleScrollToAboutMe = () => {
     aboutmeRef.current?.scrollToAboutMe();
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleScrollToEducation = () => {
     educationRef.current?.scrollToEducation();
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleScrollToSkills = () => {
     skillsRef.current?.scrollToProjects();
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleScrollToProjects = () => {
     projectsRef.current?.scrollToProjects();
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const handleScrollToContact = () => {
     contactRef.current?.scrollToContact();
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const toggleMenu = () => {
