@@ -49,7 +49,7 @@ const AboutMe = forwardRef((props, ref) => {
         </div>
         <div className="profile__CV">
           <button onClick={downloadPDFFile} className="button__download">
-            Download CV
+            {t("download")}
           </button>
         </div>
       </div>
