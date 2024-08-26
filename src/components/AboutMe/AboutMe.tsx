@@ -2,6 +2,7 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import DefaultProfile from "../../assets/default-avatar.png";
+
 import "./style.css";
 
 const AboutMe = forwardRef((props, ref) => {
@@ -13,6 +14,16 @@ const AboutMe = forwardRef((props, ref) => {
       aboutmeSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     },
   }));
+
+  const downloadPDFFile = () => {
+    const pdfUrl = "Stefan_Joncic_CV.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Stefan_Joncic.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section className="profile" ref={aboutmeSectionRef}>
@@ -35,6 +46,11 @@ const AboutMe = forwardRef((props, ref) => {
           <a href="https://github.com/mrStefanJ" className="icon--link">
             <FaGithub />
           </a>
+        </div>
+        <div className="profile__CV">
+          <button onClick={downloadPDFFile} className="button__download">
+            Download CV
+          </button>
         </div>
       </div>
     </section>
