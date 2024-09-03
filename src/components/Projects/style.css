@@ -1,5 +1,4 @@
 .projects {
-  display: block;
   padding: 30px 0;
 }
 
@@ -31,6 +30,26 @@
   width: 100%;
   text-align: center;
   padding: 14px 0;
+}
+
+.project__program-language{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.javascript{
+  color: #dfdf44;
+}
+.react{
+  color: #58c4dc;
+}
+.angular{
+  color: #a50d0df8;
+}
+
+.MuiTooltip-tooltip{
+  font-size: 14px!important;
+  text-align: center;
 }
 
 .project__links .project__link {
@@ -84,13 +103,15 @@
 @media only screen and (min-width: 768px) {
   .projects__list {
     flex-direction: row;
+    flex-wrap: wrap;
+  justify-content: center;
     padding: 30px;
     gap: 10px;
   }
 
   .project {
     justify-content: space-between;
-    width: 100%;
+    width: 46%;
     height: 600px;
   }
 
@@ -110,5 +131,6 @@
 @media only screen and (min-width: 1024px) {
   .project {
     height: 520px;
+    width: 30%;
   }
 }

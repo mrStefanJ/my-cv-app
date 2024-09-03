@@ -13,6 +13,8 @@
   "projectOne": "Ovo je jednostavan projekat o kvizu. Gde korisnik može da radi test za HTML, CSS ili JavaScript-a i da izabere juniorski, srednji ili viši nivo.",
   "projectTwo": "Ovo je aplikacija za filmove i serije, gde korisnik može da vidi na stranici Trender sve filmove i serije. Na stranici Filmovi ili Serije imaće opcije za odabir žanrova.",
   "projectThree": "Ovaj projekat je stoni tenis koji korisnik može da doda novog igrača, prikazuje sve igrače i prikazuje rezultate igara.",
+  "projectFour": "Ovo je jednostavna CRUD aplikacija. Možete da kreirate novog zaposlenog, prikažite listu zaposlenih, ažurirajte zaposlenog po izabranom i da izbrišite zaposlenog. ",
+  "projectInfo": "Koristio sam JSON servis, ali na Netlifaju ne podržava!!!",
   "contactName": "Ime",
   "contactEmail": "Email",
   "contactCompnay": "Kompanija",
