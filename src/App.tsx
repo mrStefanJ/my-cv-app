@@ -4,7 +4,6 @@ import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
-import { Education } from "./components/Education";
 import useLocalStorage from "use-local-storage";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
@@ -18,7 +17,6 @@ function App() {
   );
 
   const aboutmeRef = useRef(null);
-  const educationRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
@@ -37,11 +35,9 @@ function App() {
         projectsRef={projectsRef}
         skillsRef={skillsRef}
         aboutmeRef={aboutmeRef}
-        educationRef={educationRef}
       />
       <main>
         <AboutMe ref={aboutmeRef} />
-        <Education ref={educationRef} />
         <Skills ref={skillsRef} />
         <Projects ref={projectsRef} />
         <Contact ref={contactRef} />

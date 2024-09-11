@@ -11,7 +11,6 @@ const Header = ({
   theme,
   onClick,
   aboutmeRef,
-  educationRef,
   skillsRef,
   projectsRef,
   contactRef,
@@ -19,7 +18,6 @@ const Header = ({
   theme: string;
   onClick: () => void;
   aboutmeRef: React.RefObject<{ scrollToAboutMe: () => void }>;
-  educationRef: React.RefObject<{ scrollToEducation: () => void }>;
   skillsRef: React.RefObject<{ scrollToProjects: () => void }>;
   projectsRef: React.RefObject<{ scrollToProjects: () => void }>;
   contactRef: React.RefObject<{ scrollToContact: () => void }>;
@@ -29,11 +27,6 @@ const Header = ({
 
   const handleScrollToAboutMe = () => {
     aboutmeRef.current?.scrollToAboutMe();
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleScrollToEducation = () => {
-    educationRef.current?.scrollToEducation();
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -72,13 +65,6 @@ const Header = ({
           onClick={handleScrollToAboutMe}
         >
           {t("about")}
-        </Link>
-        <Link
-          href="#education"
-          className="header__navigation-link"
-          onClick={handleScrollToEducation}
-        >
-          {t("education")}
         </Link>
         <Link
           href="#skills"
