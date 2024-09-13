@@ -4,7 +4,7 @@ import Quiz from "../../assets/Quiz.png";
 import Employee from "../../assets/crud-app.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
-import { Link, Tooltip } from "@mui/material";
+import { Link } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 const Projects = forwardRef((props, ref) => {
@@ -131,16 +131,14 @@ const Projects = forwardRef((props, ref) => {
             >
               Github Link
             </Link>
-            <Tooltip title={t("projectInfo")} placement="top">
-              <Link
-                href="https://crud-operation-user.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project__link"
-              >
-                Live
-              </Link>
-            </Tooltip>
+            <Link
+              href="https://crud-operation-user.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project__link"
+            >
+              Live
+            </Link>
           </div>
         </div>
       </div>
