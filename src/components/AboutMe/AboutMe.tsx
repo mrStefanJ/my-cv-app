@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import DefaultProfile from "../../assets/default-avatar.png";
+import DefaultProfile from "../../assets/Stefan-Joncic.png";
 
 import "./style.css";
 
