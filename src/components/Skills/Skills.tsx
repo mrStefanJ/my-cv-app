@@ -10,6 +10,7 @@ import TypeScript from "../../assets/icons/typescript.svg";
 import Sass from "../../assets/icons/sass.svg";
 import VisualStudio from "../../assets/icons/visual-studio-code.svg";
 import Firebase from "../../assets/icons/firebase.png";
+import NextJS from "../../assets/icons/nextJS.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -48,6 +49,16 @@ const Skills = forwardRef((prop, ref) => {
             <img src={Redux} alt="Redux" className="icon" />
           </Link>
           <span className="tooltip-text">Redux</span>
+        </div>
+        <div className="icon--tooltip">
+          <Link
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={NextJS} alt="Redux" className="icon" />
+          </Link>
+          <span className="tooltip-text">Next.JS</span>
         </div>
         <div className="icon--tooltip">
           <Link

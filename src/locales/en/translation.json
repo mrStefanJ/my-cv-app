@@ -14,6 +14,7 @@
   "projectTwo": "This is app for Movies and Series, where user can see on Trending page all Movies and Series. On Movies or Series page will have options to select genres.",
   "projectThree": "This project is Table Tennis which user can adding new Player, display all Players and showing result of the games.",
   "projectFour": "This is simple CRUD operation app. To create new Employee, display list of employees, update employee by selected and delete employee.",
+  "projectFive": "This project is currently under construction, running in Next.js. The current idea of ​​this project is the organization of the school system. Details COMING SOON!!!",
   "projectInfo": "I used JSON serve, but on Netlify doesn't support it!!!",
   "contactName": "Name",
   "contactEmail": "Email",

@@ -2,6 +2,7 @@ import TableTennis from "../../assets/Table_tennis.png";
 import MovieSeries from "../../assets/movie_serie_app.png";
 import Quiz from "../../assets/Quiz.png";
 import Employee from "../../assets/crud-app.png";
+import Managment from "../../assets/school-management.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { Link } from "@mui/material";
@@ -139,6 +140,34 @@ const Projects = forwardRef((props, ref) => {
             >
               Live
             </Link>
+          </div>
+        </div>
+        <div className="project">
+          <img src={Managment} alt="employee" className="project__image" />
+          <h2 className="project__title">School Management</h2>
+          <div className="project__about">
+            <p className="project__text">{t("projectFive")}</p>
+          </div>
+          <div className="project__program-language">
+            <p className="nextjs">Next.JS</p>
+          </div>
+          <div className="project__links">
+            <Link
+              href="https://github.com/mrStefanJ/management-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project__link"
+            >
+              Github Link
+            </Link>
+            {/* <Link
+              href="https://school-next.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project__link"
+            >
+              Live
+            </Link> */}
           </div>
         </div>
       </div>
