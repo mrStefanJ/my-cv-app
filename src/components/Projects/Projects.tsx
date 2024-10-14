@@ -1,4 +1,4 @@
-import TableTennis from "../../assets/Table_tennis.png";
+import TableTennis from "../../assets/table_tennis.png";
 import MovieSeries from "../../assets/movie_serie_app.png";
 import Quiz from "../../assets/Quiz.png";
 import Employee from "../../assets/crud-app.png";
