@@ -38,8 +38,8 @@
   visibility: hidden;
   opacity: 0;
   width: 120px;
-  background-color: var(--background-secondary);
-  color: var(--text-secondeay);
+  background-color: #fff;
+  color: #535353;
   padding: 5px;
   border-radius: 4px;
   transition: opacity 0.3s ease, visibility 0.3s ease;

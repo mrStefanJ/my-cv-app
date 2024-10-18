@@ -72,6 +72,11 @@
   color: #ff0000;
 }
 
+.contact__label{
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
 .contact__button {
   cursor: pointer;
   padding: 10px;

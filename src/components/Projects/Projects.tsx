@@ -3,6 +3,7 @@ import MovieSeries from "../../assets/movie_serie_app.png";
 import Quiz from "../../assets/Quiz.png";
 import Employee from "../../assets/crud-app.png";
 import Managment from "../../assets/school-management.png";
+import Prototype from "../../assets/prototype-web.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { Link } from "@mui/material";
@@ -168,6 +169,34 @@ const Projects = forwardRef((props, ref) => {
             >
               Live
             </Link> */}
+          </div>
+        </div>
+        <div className="project">
+          <img src={Prototype} alt="employee" className="project__image" />
+          <h2 className="project__title">Prototype Basic</h2>
+          <div className="project__about">
+            <p className="project__text">{t("projectSix")}</p>
+          </div>
+          <div className="project__program-language">
+            <p className="react">React</p>
+          </div>
+          <div className="project__links">
+            <Link
+              href="https://github.com/mrStefanJ/basic-web-site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project__link"
+            >
+              Github Link
+            </Link>
+            <Link
+              href="https://prototype-responsive.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project__link"
+            >
+              Live
+            </Link>
           </div>
         </div>
       </div>
