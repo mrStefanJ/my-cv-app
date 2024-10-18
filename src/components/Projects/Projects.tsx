@@ -1,5 +1,5 @@
-import TableTennis from "../../assets/table_tennis.png";
-import MovieSeries from "../../assets/movie_serie_app.png";
+import TableTennis from "../../assets/table-tennis.png";
+import MovieSeries from "../../assets/movie-serie-app.png";
 import Quiz from "../../assets/Quiz.png";
 import Employee from "../../assets/crud-app.png";
 import Managment from "../../assets/school-management.png";
