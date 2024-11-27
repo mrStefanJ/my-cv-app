@@ -14,7 +14,7 @@
   "projectTwo": "Ovo je aplikacija za filmove i serije, gde korisnik može da vidi na stranici Trender sve filmove i serije. Na stranici Filmovi ili Serije imaće opcije za odabir žanrova.",
   "projectThree": "Ovaj projekat je stoni tenis koji korisnik može da doda novog igrača, prikazuje sve igrače i prikazuje rezultate igara.",
   "projectFour": "Ovo je jednostavna CRUD aplikacija. Možete da kreirate novog zaposlenog, prikažite listu zaposlenih, ažurirajte zaposlenog po izabranom i da izbrišite zaposlenog. ",
-  "projectFive": "Ovaj projekat je trenuto u izgradnji, koji se radi u Next.js-u. Trenutan zamisao ovog projekta je organizacija skolskog sistema. Detalji USKORO!!!",
+  "projectFive": "Trenutna ideja ovog projekta je organizacija školskog sistema, a zavisno od toga koji korisnik ima uloge da racionalizuje i automatizuje različite administrativne, akademske i operativne poslove u obrazovnim institucijama.",
   "projectSix": "Ovo je jednostavan projekat sa osnovnom animacijom i stilom urađen Mobile First Approach.",
   "projectInfo": "Koristio sam JSON servis, ali na Netlifaju ne podržava!!!",
   "contactName": "Ime",
