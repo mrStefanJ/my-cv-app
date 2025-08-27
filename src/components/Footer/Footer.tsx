@@ -5,7 +5,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <footer className="footer">
-      <p className="footer__text">{t("desing")} Stefan Joncic 2024</p>
+      <p className="footer__text">{t("desing")} Stefan Joncic 2025</p>
     </footer>
   );
 };

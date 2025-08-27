@@ -1,0 +1,1 @@
+export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue";

@@ -1,0 +1,23 @@
+.project__category {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.project__category-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--btn-category);
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  color: var(--btn-category);
+}
+
+.project__category-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}

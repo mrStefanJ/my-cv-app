@@ -34,6 +34,7 @@ h2 {
   --link-primary: #000000;
   --link-primaty__hover: #ffffff;
   --btn-primary: #000000;
+  --btn-category: #000;
 }
 [data-theme='dark'] {
   --background-primary: linear-gradient(to right,#535353, #000000);
@@ -47,4 +48,5 @@ h2 {
   --link-primary: #ffffff;
   --link-primaty__hover: #000000;
   --btn-primary: #ffffff;
+  --btn-category: #fff;
 }

@@ -33,27 +33,29 @@
   padding: 14px 0;
 }
 
-.project__program-language{
+.project__program-language {
   font-size: 18px;
   font-weight: 500;
 }
 
-.javascript{
+.javascript {
   color: #dfdf44;
 }
-.react{
+.react {
   color: #58c4dc;
 }
-.angular{
+.angular {
   color: #a50d0df8;
 }
-
 .nextjs {
-  color: #0057ff
+  color: #0057ff;
+}
+.vue {
+  color: #047004;
 }
 
-.MuiTooltip-tooltip{
-  font-size: 14px!important;
+.MuiTooltip-tooltip {
+  font-size: 14px !important;
   text-align: center;
 }
 
@@ -70,7 +72,7 @@
   outline-offset: 0px;
   text-shadow: none;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  font-weight: bold!important;
+  font-weight: bold !important;
 }
 
 .project__link:hover {
@@ -109,7 +111,7 @@
   .projects__list {
     flex-direction: row;
     flex-wrap: wrap;
-  justify-content: center;
+    justify-content: center;
     padding: 30px;
     gap: 10px;
   }

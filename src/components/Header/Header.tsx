@@ -51,10 +51,19 @@ const Header = ({
 
   return (
     <header className="header">
-      <div className="header__toggle" onClick={toggleMenu}>
+      <button
+        className="header__toggle"
+        aria-expanded={isMenuOpen}
+        aria-controls="header-navigation"
+        onClick={toggleMenu}
+      >
         {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+        <span className="sr-only">
+        </span>
+      </button>
+
       <nav
+        id="header-navigation"
         className={`header__navigation ${
           isMenuOpen ? "header__navigation--open" : ""
         }`}
@@ -88,6 +97,7 @@ const Header = ({
           {t("contact")}
         </Link>
       </nav>
+
       <div className="header__icons">
         <LanguageSwitcher />
         <button className="header__button" onClick={onClick}>
