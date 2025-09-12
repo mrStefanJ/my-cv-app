@@ -16,6 +16,8 @@
   "projectFour": "Ovo je jednostavna CRUD aplikacija. Možete da kreirate novog zaposlenog, prikažite listu zaposlenih, ažurirajte zaposlenog po izabranom i da izbrišite zaposlenog. ",
   "projectFive": "Trenutna ideja ovog projekta je organizacija školskog sistema, a zavisno od toga koji korisnik ima uloge da racionalizuje i automatizuje različite administrativne, akademske i operativne poslove u obrazovnim institucijama.",
   "projectSix": "Ovo je jednostavan projekat sa osnovnom animacijom i stilom urađen Mobile First Approach.",
+  "projectSeven": "Ovaj projekat implementira punu CRUD (Create, Read, Update, Delete) funkcionalnost. Korisnici mogu kreirati nove unose, pregledati listu postojećih stavki, ažurirati detalje i brisati stavke po potrebi. Aplikacija pruža jednostavan interfejs za efikasno i sigurno upravljanje podacima.",
+  "projectEight": "Ovo je aplikacija za filmove koja omogućava korisnicima da istražuju i upravljaju kolekcijom filmova. Korisnici mogu pregledati listu filmova, pretraživati filmove po nazivu ili žanru, dodavati nove filmove u kolekciju i pregledati detaljne informacije o svakom filmu. Aplikacija pruža intuitivan interfejs za pregled, filtriranje i upravljanje podacima o filmovima.",
   "projectInfo": "Koristio sam JSON servis, ali na Netlifaju ne podržava!!!",
   "contactName": "Ime",
   "contactEmail": "Email",

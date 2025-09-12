@@ -16,6 +16,8 @@
   "projectFour": "This is simple CRUD operation app. To create new Employee, display list of employees, update employee by selected and delete employee.",
   "projectFive": "The current idea of ​​this project is the organization of the school system, and idepende of the which user have roles to streamline and automate various administrative, academic and operational tasks in educational institutions.",
   "projectSix": "This is simple project with the basic animation and style Mobile First Approach.",
+  "projectSeven": "This project implements full CRUD (Create, Read, Update, Delete) functionality. Users can create new entries, view a list of existing items, update details, and delete items as needed. The application provides an easy-to-use interface for managing data efficiently and securely.",
+  "projectEight": "This is a Movie App that allows users to explore and manage a collection of movies. Users can view a list of movies, search for movies by title or genre, add new movies to the collection, and view detailed information about each movie. The app provides an intuitive interface for browsing, filtering, and managing movie data.",
   "projectInfo": "I used JSON serve, but on Netlify doesn't support it!!!",
   "contactName": "Name",
   "contactEmail": "Email",

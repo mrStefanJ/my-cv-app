@@ -1,5 +1,5 @@
 import { Link } from "@mui/material";
-import { forwardRef, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Employee from "../../assets/crud-app.png";
 import MovieSeries from "../../assets/movie-serie-app.png";
@@ -8,25 +8,40 @@ import Quiz from "../../assets/Quiz.png";
 import Managment from "../../assets/school-management.png";
 import TableTennis from "../../assets/table-tennis.png";
 import CrudAdvance from "../../assets/vue-crud.png";
-import { CategoryType } from "../../type/CategoryType";
+import MovieNight from "../../assets/movie-night-app.png";
 import { CategoryProject } from "../Category";
 import "./style.css";
-
-type Project = {
-  id: string;
-  title: string;
-  img: string;
-  alt: string;
-  descKey: string;
-  tech: CategoryType | "Next.JS"; // Allow extra labels if needed
-  github?: string;
-  live?: string;
-};
+import { CategoryType, Project } from "../../type/ProjectType";
 
 const Projects = forwardRef((props, ref) => {
   const projectsSectionRef = useRef<HTMLElement>(null);
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>("All");
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            // dodaj klasu sa malim delay-em da idu jedan po jedan
+            setTimeout(() => {
+              entry.target.classList.add("animate");
+            }, index * 200); // delay 200ms po projektu
+            observer.unobserve(entry.target); // animacija samo jednom
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const items = document.querySelectorAll(".project");
+    items.forEach((el) => observer.observe(el));
+
+    return () => {
+      items.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   useImperativeHandle(ref, () => ({
     scrollToProjects: () => {
@@ -107,9 +122,18 @@ const Projects = forwardRef((props, ref) => {
       title: "CRUD advanced",
       img: CrudAdvance,
       alt: "crud advanced",
-      descKey: "projectSix",
+      descKey: "projectSeven",
       tech: "Vue",
       github: "https://github.com/mrStefanJ/Vue/tree/main/vue-crud-advanced",
+    },
+    {
+      id: "movie2",
+      title: "Movie App",
+      img: MovieNight,
+      alt: "movie app",
+      descKey: "projectEight",
+      tech: "Angular",
+      github: "https://github.com/mrStefanJ/movie-night",
     },
   ];
 
@@ -129,49 +153,49 @@ const Projects = forwardRef((props, ref) => {
         />
       </div>
       <div className="projects__list">
-        {filtered.map((proj) => (
-          <div className="project" key={proj.id}>
-            <img src={proj.img} alt={proj.alt} className="project__image" />
-            <h2 className="project__title">{proj.title}</h2>
-            <div className="project__about">
-              <p className="project__text">{t(proj.descKey)}</p>
-            </div>
-            <div className="project__program-language">
-              <p className={proj.tech.toLowerCase().replace(".", "")}>
-                {proj.tech}
-              </p>
-            </div>
-            <div className="project__links">
-              {proj.github && (
-                <Link
-                  href={proj.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project__link"
-                >
-                  Github Link
-                </Link>
-              )}
-              {proj.live && (
-                <Link
-                  href={proj.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project__link"
-                >
-                  Live
-                </Link>
-              )}
-            </div>
+  {filtered.map((proj) => (
+    <div className="project" key={proj.id}>
+      <div className="project__content">
+        <div className="project__image">
+          <img src={proj.img} alt={proj.alt} className="image__size" />
+        </div>
+        <div className="project__details">
+          <h2 className="project__title">{proj.title}</h2>
+          <div className="project__about">
+            <p className="project__text">{t(proj.descKey)}</p>
           </div>
-        ))}
-
-        {filtered.length === 0 && (
-          <p className="no-projects">
-            {t("noProjectsFound") || "No projects."}
-          </p>
-        )}
+          <div className="project__program-language">
+            <p className={proj.tech.toLowerCase().replace(".", "")}>
+              {proj.tech}
+            </p>
+          </div>
+          <div className="project__links">
+            {proj.github && (
+              <Link
+                href={proj.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project__link"
+              >
+                Github Link
+              </Link>
+            )}
+            {proj.live && (
+              <Link
+                href={proj.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project__link"
+              >
+                Live
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
     </section>
   );
 });

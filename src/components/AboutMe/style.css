@@ -12,9 +12,25 @@
 .image {
   width: 350px;
   height: 350px;
-  border-radius: 200px;
-  box-shadow: var(--box-shadow);
+  border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 0 20px var(--link-primary);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px var(--link-primary),
+                0 0 20px var(--link-primary);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--link-primary),
+                0 0 60px var(--link-primary);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--link-primary),
+                0 0 20px var(--link-primary);
+  }
 }
 
 .profile__text {

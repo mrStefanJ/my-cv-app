@@ -28,6 +28,9 @@ const AboutMe = forwardRef((props, ref) => {
   return (
     <section className="profile" ref={aboutmeSectionRef}>
       <div className="profile__image">
+        <span className="orbit"></span>
+        <span className="orbit"></span>
+        <span className="orbit"></span>
         <img src={DefaultProfile} alt="Stefan" className="image" />
       </div>
       <div className="profile__text">

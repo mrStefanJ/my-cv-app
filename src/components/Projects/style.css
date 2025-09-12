@@ -1,3 +1,14 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .projects {
   padding: 30px 0;
 }
@@ -9,11 +20,12 @@
 .projects__list {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .project {
   position: relative;
-  margin: 20px 10px;
+  margin: 20px 0;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -21,10 +33,22 @@
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   background: var(--project-background);
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project.animate {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .project__title {
   color: var(--text-primary);
+}
+
+.project__details {
+  text-align: center;
 }
 
 .project__links {
@@ -97,47 +121,72 @@
   height: auto;
   -moz-border-radius: 0px;
   -webkit-border-radius: 3px 3px 0px 0px;
-  border-top-left-radius: 20px;
+  /* border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3); */
   object-fit: cover;
 }
 
+.image__size {
+  width: 100%;
+  background-size: 100% 100%;
+}
 .project__text {
   color: var(--text-primary);
 }
 
+.project__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
-  .projects__list {
+  .project__content {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px;
-    gap: 10px;
+    align-items: flex-start;
   }
 
-  .project {
-    justify-content: space-between;
-    width: 46%;
-    height: 600px;
+  .project:nth-child(odd) .project__content {
+    flex-direction: row; /* slika levo, tekst desno */
   }
 
-  .project__about {
+  .project:nth-child(even) .project__content {
+    flex-direction: row-reverse; /* slika desno, tekst levo */
+  }
+
+  .project__image {
+    width: 50%;
+    max-height: 100%;
+    object-fit: cover;
+    height: 324px;
+  }
+
+  .image__size {
     width: 100%;
+    height: 100%;
   }
 
-  .project__link {
-    margin: 0 5px;
+  .project:nth-child(even) .project__image .image__size {
+    border-radius: 0 20px 20px 0;
   }
 
-  .project__text {
-    padding: 0 10px;
+  .project:nth-child(odd) .project__image .image__size {
+    border-radius: 20px 0 0px 13px;
+  }
+
+  .project__details {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .project {
-    height: 520px;
-    width: 30%;
+    height: 100%;
+    width: 100%;
   }
 }
