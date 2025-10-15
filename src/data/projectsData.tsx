@@ -1,10 +1,10 @@
-import TableTennis from "@/assets/table-tennis.png";
-import MovieSeries from "@/assets/movie-serie-app.png";
-import Quiz from "@/assets/Quiz.png";
-import Employee from "@/assets/crud-app.png";
-import Managment from "@/assets/school-management.png";
-import Prototype from "@/assets/prototype-web.png";
-import CrudAdvance from "@/assets/vue-crud.png";
+import TableTennis from "../assets/table-tennis.png";
+import MovieSeries from "../assets/movie-serie-app.png";
+import Quiz from "../assets/Quiz.png";
+import Employee from "../assets/crud-app.png";
+import Managment from "../assets/school-management.png";
+import Prototype from "../assets/prototype-web.png";
+import CrudAdvance from "../assets/vue-crud.png";
 import { Project } from "../type/ProjectType";
 
 export const projects: Project[] = [

@@ -147,22 +147,12 @@
     align-items: flex-start;
   }
 
-  .project:nth-child(odd) .project__content {
-    flex-direction: row; /* slika levo, tekst desno */
+  .project .project__content {
+    flex-direction: row-reverse;
     width: 100%;
   }
 
-
-  .project:nth-child(even) .project__content {
-    flex-direction: row-reverse; /* slika desno, tekst levo */
-    width: 100%;
-  }
-
-  .project:nth-child(odd) .project__content .project__image {
-    border-right: groove;
-  }
-
-  .project:nth-child(even) .project__content .project__image {
+  .project .project__content .project__image {
     border-left: groove;
   }
 
