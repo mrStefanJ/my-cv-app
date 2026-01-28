@@ -5,6 +5,7 @@ import Employee from "../assets/crud-app.png";
 import Managment from "../assets/school-management.png";
 import Prototype from "../assets/prototype-web.png";
 import CrudAdvance from "../assets/vue-crud.png";
+import ReactPythonCRUD from "../assets/react-python.png"
 import { Project } from "../type/ProjectType";
 
 export const projects: Project[] = [
@@ -54,7 +55,7 @@ export const projects: Project[] = [
     img: Managment,
     alt: "school management",
     descKey: "projectFive",
-    tech: "React",
+    tech: "Next.JS",
     github: "https://github.com/mrStefanJ/management-dashboard",
   },
   {
@@ -76,4 +77,13 @@ export const projects: Project[] = [
     tech: "Vue",
     github: "https://github.com/mrStefanJ/Vue/tree/main/vue-crud-advanced",
   },
+  {
+    id: "crid-react-python",
+    title:"FullStack CRUD",
+    img: ReactPythonCRUD,
+    alt: "crud react python",
+    descKey:"projectNine",
+    tech: "React",
+    github: "https://github.com/mrStefanJ/react-python-crud"
+  }
 ];

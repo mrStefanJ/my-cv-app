@@ -11,6 +11,8 @@ import Sass from "../../assets/icons/sass.svg";
 import VisualStudio from "../../assets/icons/visual-studio-code.svg";
 import Firebase from "../../assets/icons/firebase.png";
 import NextJS from "../../assets/icons/nextJS.png";
+import Python from "../../assets/icons/python.png";
+import Mongodb from "../../assets/icons/mongodb.png";
 import "./style.css";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -160,6 +162,26 @@ const Skills = forwardRef((prop, ref) => {
             <img src={Firebase} alt="Firebase" className="icon" />
           </Link>
           <span className="tooltip-text">Firebase</span>
+        </div>
+        <div className="icon--tooltip">
+          <Link
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Python} alt="Python" className="icon" />
+          </Link>
+          <span className="tooltip-text">Python</span>
+        </div>
+        <div className="icon--tooltip">
+          <Link
+            href="https://www.mongodb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Mongodb} alt="Mongodb" className="icon" />
+          </Link>
+          <span className="tooltip-text">Mongodb</span>
         </div>
       </div>
     </section>
