@@ -27,36 +27,46 @@ const AboutMe = forwardRef((props, ref) => {
 
   return (
     <section className="profile" ref={aboutmeSectionRef}>
-      <div className="profile__image">
-        <span className="orbit"></span>
-        <span className="orbit"></span>
-        <span className="orbit"></span>
-        <img src={DefaultProfile} alt="Stefan" className="image" />
-      </div>
-      <div className="profile__text">
-        <p className="about-me__text">
-          {t("hello")} <span className="text--animation">Stefan Jončić</span>.
-        </p>
-        <p className="about-me__text">{t("iam")} Frontend Developer.</p>
-        <p className="about-me__text">{t("aboutMe")}</p>
-        <div className="profile__icons">
-          <a
-            href="https://www.linkedin.com/in/stefan-jon%C4%8Di%C4%87-64958a86/"
-            className="icon--link"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a href="https://github.com/mrStefanJ" className="icon--link">
-            <FaGithub />
-          </a>
-        </div>
-        <div className="profile__CV">
-          <button onClick={downloadPDFFile} className="button__download">
-            {t("download")}
-          </button>
-        </div>
-      </div>
-    </section>
+  <div className="profile__image">
+    <div className="image__wrapper">
+      <img src={DefaultProfile} alt="Stefan" className="image" />
+      <div className="image__glow"></div>
+    </div>
+  </div>
+
+  <div className="profile__text">
+    <p className="intro__hello">{t("hello")}</p>
+    <h1 className="intro__name text--animation">Stefan Jončić</h1>
+    <h2 className="intro__role">Frontend Developer</h2>
+    <p className="about-me__text">{t("aboutMe")}</p>
+
+    <div className="profile__icons">
+      <a
+        href="https://www.linkedin.com/in/stefan-jon%C4%8Di%C4%87-64958a86/"
+        className="icon--link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaLinkedinIn />
+      </a>
+      <a
+        href="https://github.com/mrStefanJ"
+        className="icon--link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaGithub />
+      </a>
+    </div>
+
+    <div className="profile__CV">
+      <button onClick={downloadPDFFile} className="button__download">
+        {t("download")}
+      </button>
+    </div>
+  </div>
+</section>
+
   );
 });
 

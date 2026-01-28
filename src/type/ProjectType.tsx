@@ -4,9 +4,9 @@ export type Project = {
   img: string;
   alt: string;
   descKey: string;
-  tech: CategoryType | "Next.JS";
+  tech: CategoryType;
   github?: string;
   live?: string;
 };
 
-export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue";
+export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue" | "Next.JS";

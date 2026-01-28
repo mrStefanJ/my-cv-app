@@ -23,8 +23,7 @@ h2 {
 }
 
 :root {
-  --background-primary: linear-gradient(to right, #ffffff, #929292);
-  --header-background: #ffffff;
+  --background-primary: linear-gradient(to right, #ffffff, #f0e4e4);
   --project-background: #fff;
   --text-primary: #000000;
   --text-secondeay: #ffffff;
@@ -37,13 +36,12 @@ h2 {
   --btn-category: #000;
 }
 [data-theme='dark'] {
-  --background-primary: linear-gradient(to right,#535353, #000000);
-  --header-background: #535353;
-  --project-background: linear-gradient(to right,#535353, #000000);
+  --background-primary: radial-gradient(circle at top left, #0f172a, #1e293b);
+  --project-background: radial-gradient(circle at top left, #0f172a, #1e293b);
   --text-primary: #ffffff;
   --text-secondeay: #000000;
-  --box-shadow: rgba(255, 255, 255, 0.84) 0px 0.0625em 1.0625em,
-  rgba(244, 241, 241, 0.849) 0px 0.125em 0.5em,
+  --box-shadow: #3f577d 0px 0.0625em 1.0625em,
+  #1e293b 0px 0.125em 0.5em,
   rgba(236, 233, 233, 0.821) 0px 0px 0px 0px inset;
   --link-primary: #ffffff;
   --link-primaty__hover: #000000;
