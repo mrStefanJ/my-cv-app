@@ -3,74 +3,66 @@ import {
   forwardRef,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { projects } from "../../data/projectsData";
 import { CategoryType } from "../../type/ProjectType";
 import { CategoryProject } from "../Category";
 import "./style.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { ProjectCard } from "../Cards/ProjectCard";
 
-const Projects = forwardRef((props, ref) => {
-  const projectsSectionRef = useRef<HTMLElement>(null);
+interface ProjectsHandle {
+  scrollToProjects: () => void;
+}
+
+const Projects = forwardRef<ProjectsHandle>((_, ref) => {
+  const sectionRef = useRef<HTMLElement | null>(null);
   const { t } = useTranslation();
-  const [selectedCategory, setSelectedCategory] = useState<CategoryType>("All");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("animate");
-            }, index * 200);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryType>("All");
 
-    const items = document.querySelectorAll(".project");
-    items.forEach((el) => observer.observe(el));
-
-    return () => {
-      items.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
-
+  /* ------------------ AOS INIT ------------------ */
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       once: true,
+      easing: "ease-out-cubic",
     });
   }, []);
 
+  /* ------------------ EXPOSE SCROLL ------------------ */
   useImperativeHandle(ref, () => ({
-    scrollToProjects: () => {
-      projectsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    scrollToProjects() {
+      sectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     },
   }));
 
-  const categories: CategoryType[] = [
-    "All",
-    "JavaScript",
-    "React",
-    "Angular",
-    "Vue",
-    "Next.JS",
-  ];
-
-  const filtered = projects.filter(
-    (p) => selectedCategory === "All" || p.tech === selectedCategory,
+  /* ------------------ CATEGORIES ------------------ */
+  const categories: CategoryType[] = useMemo(
+    () => ["All", "JavaScript", "React", "Angular", "Vue", "Next.JS"],
+    [],
   );
 
+  /* ------------------ FILTER LOGIC ------------------ */
+  const filteredProjects = useMemo(() => {
+    if (selectedCategory === "All") return projects;
+    return projects.filter((p) => p.tech === selectedCategory);
+  }, [selectedCategory]);
+
   return (
-    <section className="projects" ref={projectsSectionRef}>
+    <section className="projects" ref={sectionRef}>
       <h2 className="projects__title">{t("myWorks")}</h2>
+
       <div className="project__category">
         <CategoryProject
           categories={categories}
@@ -79,48 +71,15 @@ const Projects = forwardRef((props, ref) => {
           t={t}
         />
       </div>
+
       <div className="projects__list">
-        {filtered.map((proj) => (
-          <div className="project" key={proj.id} data-aos="fade-up">
-            <div className="project__content">
-              <div className="project__image">
-                <img src={proj.img} alt={proj.alt} className="image__size" />
-              </div>
-              <div className="project__details">
-                <h2 className="project__title">{proj.title}</h2>
-                <div className="project__about">
-                  <p className="project__text">{t(proj.descKey)}</p>
-                </div>
-                <div className="project__program-language">
-                  <p className={proj.tech.toLowerCase().replace(".", "")}>
-                    {proj.tech}
-                  </p>
-                </div>
-                <div className="project__links">
-                  {proj.github && (
-                    <Link
-                      href={proj.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project__link"
-                    >
-                      Github Link
-                    </Link>
-                  )}
-                  {proj.live && (
-                    <Link
-                      href={proj.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project__link"
-                    >
-                      Live
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+        {filteredProjects.map((proj, index) => (
+          <ProjectCard
+            key={proj.id}
+            project={proj}
+            delay={index * 120}
+            t={t}
+          />
         ))}
       </div>
     </section>
