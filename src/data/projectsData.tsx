@@ -6,6 +6,7 @@ import Managment from "../assets/school-management.png";
 import Prototype from "../assets/prototype-web.png";
 import CrudAdvance from "../assets/vue-crud.png";
 import ReactPythonCRUD from "../assets/react-python.png"
+import PingPong from '../assets/ping-pong.png'
 import { Project } from "../type/ProjectType";
 
 export const projects: Project[] = [
@@ -85,5 +86,14 @@ export const projects: Project[] = [
     descKey:"projectNine",
     tech: "React",
     github: "https://github.com/mrStefanJ/react-python-crud"
+  },
+  {
+    id: "ping-pong-game",
+    title: "Pin Pong",
+    img: PingPong,
+    alt: "ping pong game",
+    descKey: "projectTen",
+    tech: "Python",
+    github: "https://github.com/mrStefanJ/ping-pong"
   }
 ];

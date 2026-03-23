@@ -48,7 +48,7 @@ const Projects = forwardRef<ProjectsHandle>((_, ref) => {
 
   /* ------------------ CATEGORIES ------------------ */
   const categories: CategoryType[] = useMemo(
-    () => ["All", "JavaScript", "React", "Angular", "Vue", "Next.JS"],
+    () => ["All", "JavaScript", "React", "Angular", "Vue", "Next.JS", "Python"],
     [],
   );
 

@@ -9,4 +9,4 @@ export type Project = {
   live?: string;
 };
 
-export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue" | "Next.JS";
+export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue" | "Next.JS" | "Python";
