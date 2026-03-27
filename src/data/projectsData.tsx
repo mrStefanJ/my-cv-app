@@ -5,11 +5,12 @@ import Employee from "../assets/images/crud-app.png";
 import Managment from "../assets/images/school-management.png";
 import Prototype from "../assets/images/prototype-web.png";
 import CrudAdvance from "../assets/images/vue-crud.png";
-import ReactPythonCRUD from "../assets/images/react-python.png"
-import PingPong from '../assets/images/ping-pong.png'
-import MultiverseRunner from "../assets/images/multiverse-runner.png"
+import ReactPythonCRUD from "../assets/images/react-python.png";
+import PingPong from '../assets/images/ping-pong.png';
+import MultiverseRunner from "../assets/images/multiverse-runner.png";
+import Menjaza from '../assets/images/menjaza.png';
 
-import MultiverseRunnerVideo from '../assets/videos/miltivers-runner.mp4'
+import MultiverseRunnerVideo from '../assets/videos/miltivers-runner.mp4';
 import { Project } from "../types/ProjectType";
 
 export const projects: Project[] = [
@@ -108,5 +109,15 @@ export const projects: Project[] = [
     tech: "Python",
     github: "https://github.com/mrStefanJ/multiverse-runner",
     video: MultiverseRunnerVideo,
+  },
+  {
+    id: "menjaza",
+    title: "Menjaza",
+    img: Menjaza,
+    alt: "menjaza slicica",
+    descKey: "projectTwelve",
+    tech: "Vue",
+    github: "https://github.com/mrStefanJ/menjaza",
+    video: "",
   }
 ];

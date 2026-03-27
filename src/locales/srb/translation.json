@@ -21,6 +21,7 @@
   "projectNine": "Kompletna CRUD aplikacija za upravljanje elementima, izgrađena sa modernim React frontendom i FastAPI bekendom.",
   "projectTen": "NEON PONG je moderna, **verzija klasične igre Pong u indi stilu platforme Steam**, napravljena pomoću **Python-a i Pygame-a**, sa neonskim vizuelnim prikazima, svetlećim lopaticama i lopticom sa efektom praćenja.",
   "projectEleven": "Brzi 2D platformer napravljen pomoću Pajtona i Pajgejma. Krećite se kroz dinamične platforme, izbegavajte prepreke i savladajte mehaniku skokova na više izazovnih nivoa. Prikazuje modularni kod, glatku igru i uglađeni korisnički interfejs za profesionalno igračko iskustvo.",
+  "projectTwelve": "Menjaža je web aplikacija namenjena razmeni sličica (ili kolekcionarskih albuma) između korisnika. Platforma omogućava korisnicima da pregledaju dostupne albume, dodaju sličice koje poseduju ili im nedostaju, i lako pronađu druge korisnike za razmenu.",
   "projectInfo": "Koristio sam JSON servis, ali na Netlifaju ne podržava!!!",
   "contactName": "Ime",
   "contactEmail": "Email",

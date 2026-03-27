@@ -10,11 +10,16 @@ import "./App.css";
 import "./i18n";
 
 function App() {
-  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultDark ? "dark" : "light"
-  );
+  const getDefaultTheme = () => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+    return "light";
+  };
+
+  const [theme, setTheme] = useLocalStorage("theme", getDefaultTheme());
 
   const aboutmeRef = useRef(null);
   const skillsRef = useRef(null);
