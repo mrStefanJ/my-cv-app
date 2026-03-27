@@ -34,7 +34,7 @@ export const VideoPreview = ({ video, buttonText = "Video" }: Video) => {
             zIndex: 999,
           }}
         >
-          {/* ❌ CLOSE BUTTON */}
+          {/* CLOSE BUTTON */}
           <button
             onClick={() => setIsOpen(false)}
             style={{

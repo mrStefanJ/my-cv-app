@@ -9,7 +9,7 @@ import ReactPythonCRUD from "../assets/images/react-python.png"
 import PingPong from '../assets/images/ping-pong.png'
 import MultiverseRunner from "../assets/images/multiverse-runner.png"
 
-// import MultiverseRunnerVideo from '../assets/videos/miltivers-runner.mp4'
+import MultiverseRunnerVideo from '../assets/videos/miltivers-runner.mp4'
 import { Project } from "../types/ProjectType";
 
 export const projects: Project[] = [
@@ -107,6 +107,6 @@ export const projects: Project[] = [
     descKey: "projectEleven",
     tech: "Python",
     github: "https://github.com/mrStefanJ/multiverse-runner",
-    video: "",
+    video: MultiverseRunnerVideo,
   }
 ];
