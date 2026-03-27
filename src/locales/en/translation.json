@@ -20,6 +20,7 @@
   "projectEight": "This is a Movie App that allows users to explore and manage a collection of movies. Users can view a list of movies, search for movies by title or genre, add new movies to the collection, and view detailed information about each movie. The app provides an intuitive interface for browsing, filtering, and managing movie data.",
   "projectNine": "A full-stack CRUD application for managing items, built with a modern React frontend and a FastAPI backend.",
   "projectTen": "NEON PONG is a modern, **Steam indie-styled version of the classic Pong game**, built with **Python and Pygame**, featuring neon visuals, glowing paddles, and a ball with a trailing effect.",
+  "projectEleven": "A fast-paced 2D platformer built with Python and Pygame. Navigate dynamic platforms, dodge obstacles, and master jump mechanics across multiple challenging levels. Showcases modular code, smooth gameplay, and polished UI for a professional gaming experience.",
   "projectInfo": "I used JSON serve, but on Netlify doesn't support it!!!",
   "contactName": "Name",
   "contactEmail": "Email",

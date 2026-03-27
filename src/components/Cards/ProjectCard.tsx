@@ -1,6 +1,7 @@
 import { Link } from "@mui/material";
 import { TFunction } from "i18next";
-import { Project } from "../../type/ProjectType";
+import { Project } from "@/types/ProjectType";
+import { VideoPreview } from "../Video/VideoPreview";
 
 interface Props {
   project: Project;
@@ -12,11 +13,7 @@ export const ProjectCard = ({ project, delay, t }: Props) => {
   const techClass = project.tech.toLowerCase().replace(".", "");
 
   return (
-    <div
-      className="project"
-      data-aos="fade-up"
-      data-aos-delay={delay}
-    >
+    <div className="project" data-aos="fade-up" data-aos-delay={delay}>
       <div className="project__content">
         <div className="project__image">
           <img
@@ -31,9 +28,7 @@ export const ProjectCard = ({ project, delay, t }: Props) => {
           <h2 className="project__title">{project.title}</h2>
 
           <div className="project__about">
-            <p className="project__text">
-              {t(project.descKey)}
-            </p>
+            <p className="project__text">{t(project.descKey)}</p>
           </div>
 
           <div className="project__program-language">
@@ -61,6 +56,14 @@ export const ProjectCard = ({ project, delay, t }: Props) => {
               >
                 Live
               </Link>
+            )}
+
+            {project.video && (
+              <VideoPreview
+                video={project.video}
+                thumbnail={project.img}
+                alt={project.title}
+              />
             )}
           </div>
         </div>

@@ -7,6 +7,7 @@ export type Project = {
   tech: CategoryType;
   github?: string;
   live?: string;
+  video?: string;
 };
 
 export type CategoryType = "All" | "JavaScript" | "React" | "Angular" | "Vue" | "Next.JS" | "Python";

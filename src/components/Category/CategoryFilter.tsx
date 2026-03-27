@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import { CategoryType } from "../../type/ProjectType";
+import { CategoryType } from "../../types/ProjectType";
 
 interface Props {
   categories: CategoryType[];

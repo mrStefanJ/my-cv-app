@@ -1,13 +1,16 @@
-import TableTennis from "../assets/table-tennis.png";
-import MovieSeries from "../assets/movie-serie-app.png";
-import Quiz from "../assets/Quiz.png";
-import Employee from "../assets/crud-app.png";
-import Managment from "../assets/school-management.png";
-import Prototype from "../assets/prototype-web.png";
-import CrudAdvance from "../assets/vue-crud.png";
-import ReactPythonCRUD from "../assets/react-python.png"
-import PingPong from '../assets/ping-pong.png'
-import { Project } from "../type/ProjectType";
+import TableTennis from "../assets/images/table-tennis.png";
+import MovieSeries from "../assets/images/movie-serie-app.png";
+import Quiz from "../assets/images/Quiz.png";
+import Employee from "../assets/images/crud-app.png";
+import Managment from "../assets/images/school-management.png";
+import Prototype from "../assets/images/prototype-web.png";
+import CrudAdvance from "../assets/images/vue-crud.png";
+import ReactPythonCRUD from "../assets/images/react-python.png"
+import PingPong from '../assets/images/ping-pong.png'
+import MultiverseRunner from "../assets/images/multiverse-runner.png"
+
+// import MultiverseRunnerVideo from '../assets/videos/miltivers-runner.mp4'
+import { Project } from "../types/ProjectType";
 
 export const projects: Project[] = [
   {
@@ -95,5 +98,15 @@ export const projects: Project[] = [
     descKey: "projectTen",
     tech: "Python",
     github: "https://github.com/mrStefanJ/ping-pong"
+  },
+  {
+    id: "multiverse-runner-game",
+    title: "Multiverse Runner",
+    img: MultiverseRunner,
+    alt: "multiverse runner game",
+    descKey: "projectEleven",
+    tech: "Python",
+    github: "https://github.com/mrStefanJ/multiverse-runner",
+    video: "",
   }
 ];

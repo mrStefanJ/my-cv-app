@@ -11,7 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { projects } from "../../data/projectsData";
-import { CategoryType } from "../../type/ProjectType";
+import { CategoryType } from "../../types/ProjectType";
 import { CategoryProject } from "../Category";
 import "./style.css";
 import { ProjectCard } from "../Cards/ProjectCard";
